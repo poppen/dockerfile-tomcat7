@@ -1,2 +1,3 @@
 #!/bin/sh
-exec /sbin/setuser tomcat7 /usr/share/tomcat7/bin/catalina.sh run
+exec 2>&1
+exec /usr/share/tomcat7/bin/catalina.sh run
