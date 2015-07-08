@@ -20,6 +20,9 @@ ENV CATALINA_BASE /var/lib/tomcat7
 ENV CATALINA_PID /var/run/tomcat7.pid
 ENV CATALINA_SH /usr/share/tomcat7/bin/catalina.sh
 
+RUN mkdir -p $CATALINA_HOME/common/classes && \
+    mkdir -p $CATALINA_HOME/server/classes && \
+    mkdir -p $CATALINA_HOME/shared/classes
 RUN mkdir -p ${CATALINA_BASE}/temp
 RUN mkdir -p /etc/service/tomcat7
 ADD tomcat7.sh /etc/service/tomcat7/run
